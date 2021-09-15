@@ -1,0 +1,25 @@
+{% extends 'header.html'%}
+{% block title %}Wallet{%endblock%}
+
+{% block content %}
+
+<!-- Page Content -->
+<div class="container">
+    <h1 class="badge badge-secondary">Balance - <span >{{balance}}</span></h3>
+    <h5>Enter your transactions detail.</h5>
+    <form action="/wallet" method="POST" autocomplete="on">
+        <div class="form-group w-75">
+            <label for="receiver">Receivers Address</label><br>
+            <input type="text" id="receiver" name="receiver" class="form-control"><br>
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount</label><br>
+            <input type="text" id="amount" name="amount"    
+                onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||  
+                event.charCode == 46 || event.charCode == 0 ">
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+</div>
+
+{%endblock%}

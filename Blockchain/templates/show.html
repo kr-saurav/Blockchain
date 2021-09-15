@@ -1,0 +1,12 @@
+{% extends 'header.html'%}
+{% block title %}Status{%endblock%}
+
+{%block content%}
+<div class="container">
+    {%if good:%}
+        <h3 style="color: rgb(4, 121, 0);">Status:{{response}}</h3>
+    {%else:%}
+        <h3 style="color: rgb(235, 64, 64);">Status:{{response}}</h3>
+    {%endif%}
+</div>
+{%endblock%}

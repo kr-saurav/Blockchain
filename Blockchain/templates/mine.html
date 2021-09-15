@@ -1,0 +1,21 @@
+{% extends 'header.html'%}
+{% block title %}Mine{%endblock%}
+
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+    <table class="table">
+            {%if flag==True%}
+                <h1 style="color: green;">Block mined successful!</h1>
+                <tr>
+                    <th>  Time taken to mine </th>
+                    <td> {{ time }} s</td>
+                </tr>
+            {% else %}
+                <h1 style="color: rgb(238, 12, 12);">Can't add block!</h1>
+                <h2>Not enough transactions</h2>
+            {% endif %}
+    </table>
+</div>
+
+{%endblock%}

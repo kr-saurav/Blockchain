@@ -1,0 +1,17 @@
+{% extends 'header.html'%}
+{% block title %}Connect{%endblock%}
+
+{% block content %}
+
+<!-- Page Content -->
+<div class="container">
+    <form action="/connect" method="POST" autocomplete="on">
+        <div class="form-group w-75">
+            <label for="peer">Peer's Address</label><br>
+            <input type="text" id="peer" name="peer" class="form-control"><br>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{%endblock%}

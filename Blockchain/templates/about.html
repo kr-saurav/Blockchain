@@ -1,0 +1,81 @@
+{% extends 'header.html'%}
+{% block title %}About{%endblock%}
+
+{%block head%}
+
+
+{%endblock%}
+{%block content%}
+
+
+<div class="container">
+<!--    <div class="jumbotron">
+<h1 class="heading">About this project </h1>
+
+<div>
+
+  <p class="about_pr">A cryptocurrency, crypto-currency, or crypto is a digital asset designed to work as a medium of exchange wherein individual coin ownership records are stored in a ledger existing in a form of a computerized database using strong cryptography to secure transaction records, to control the creation of additional coins, and to verify the transfer of coin ownership.It typically does not exist in physical form (like paper money) and is typically not issued by a central authority. Cryptocurrencies typically use decentralized control as opposed to centralized digital currency and central banking systems.When a cryptocurrency is minted or created prior to issuance or issued by a single issuer, it is generally considered centralized. When implemented with decentralized control, each cryptocurrency works through distributed ledger technology, typically a blockchain, that serves as a public financial transaction database.</p>
+
+  <p class="about_pr">The validity of each cryptocurrency's coins is provided by a blockchain. A blockchain is a continuously growing list of records, called blocks, which are linked and secured using cryptography. Each block typically contains a hash pointer as a link to a previous block, a timestamp and transaction data. By design, blockchains are inherently resistant to modification of the data. It is "an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way".For use as a distributed ledger, a blockchain is typically managed by a peer-to-peer network collectively adhering to a protocol for validating new blocks. Once recorded, the data in any given block cannot be altered retroactively without the alteration of all subsequent blocks, which requires collusion of the network majority.<p>
+
+   </div>
+  </div>
+</div>-->
+<div class="container-fluid padding">
+  <div class="row welcome text-center">
+    <div class="col-12">
+      <h1 class="heading">Meet the Team</h1>
+      </div>
+    <hr>
+    </div>
+  </div>
+ <div class="container-fluid padding">
+  <div class="row padding">
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="{{url_for('static', filename='images/team1.png')}}">
+        <div class="card-body">
+          <h4 class="card-title">Saurav</h4>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="{{url_for('static', filename='images/team2.png')}}">
+        <div class="card-body">
+          <h4 class="card-title">Mandeep</h4>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="{{url_for('static', filename='images/team3.png')}}">
+        <div class="card-body">
+          <h4 class="card-title">Rajneesh</h4>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="{{url_for('static', filename='images/team4.png')}}">
+        <div class="card-body">
+          <h4 class="card-title">Rishabh</h4>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="{{url_for('static', filename='images/logoo.png')}}">
+        <div class="card-body">
+          <h4 class="card-title">Vikas</h4>
+          <p class="card-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}

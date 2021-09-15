@@ -1,0 +1,66 @@
+.loader-wrapper{
+  display: none;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+
+@keyframes rotateFirst {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateSecond {
+  0% {
+    transform: rotate(730deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.loader {
+  height: 140px;
+  width: 140px;
+  box-sizing: border-box;
+  border: 20px solid #072F5F;
+  position: relative;
+  animation: rotateFirst linear 10s infinite;
+  border-radius: 45%;
+
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 14px solid #58CCED;
+  animation: rotateSecond linear 3s infinite;
+  border-radius: 15%;
+}
+
+.pt-40{
+  padding-top: 40px;
+} 
+.pb-40{
+  padding-bottom: 40px;
+}
+
+.landing-button{
+
+}
+
+.carousel {
+  height: 860px !important;
+}
+.carousel-inner{
+  height: 860px !important;
+}
+.carousel-item.active {
+  max-height: 860px !important;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{%block title%}{%endblock%}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"> </link>
+	<style>
+	div#loading {
+		width: 100px;
+		height: 100px;
+		display: none;
+		background: url(/static/loaderc.gif) no-repeat;
+		cursor: wait;
+		
+		}
+ 
+  </style>
+   {% block head %}{% endblock%}
+</head>
+
+<body>
+<div class="loader-wrapper">
+<div class="loader"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+  <div class = "container-fluid">
+	<a class="navbar-brand" href="/" style="font-size:40px;color: #fda100;font-weight: bolder;">String</a>
+  	<button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target="#navbarResponsive">
+  	     <span class="navbar-toggler-icon"></span>
+  	</button>
+  	<div class="collapse navbar-collapse" id="navbarResponsive">
+  		<ul class ="navbar-nav ml-auto">
+  			<li class ="nav-item">
+  				<a class ="nav-link" href="/blockchain">Blockchain</a>
+  			</li>
+  			<li class ="nav-item">
+  				<a class ="nav-link" href="/wallet">Wallet</a>
+  			</li>
+  			<li class ="nav-item">
+  				<a class ="nav-link" href="/mine" onclick="loading();">Mine</a>
+  			</li>
+			<li class ="nav-item">
+				<a class ="nav-link" href="/connect">Connect</a>
+			</li>
+			<li>
+				<a class="nav-link" href="/sync">Sync</a>
+			</li>
+			<li>
+				<a class="nav-link" href="/isValid">IsValid</a>
+			</li>
+			<li>
+				<a class="nav-link" href="/mykeys">MyKeys</a>
+			</li>
+			<li>
+				<a class="nav-link" href="/peers">Peers</a>
+			</li>
+			<li>
+				<a class="nav-link" href="/about">About</a>
+			</li>
+  		</ul>
+  	</div>
+  </div>
+</nav>
+<div id="content">
+{% block content %}{% endblock %}
+</div>
+<script type="text/javascript">// <![CDATA[
+	function loading(){
+		$(".loader-wrapper").show();
+		$("#content").hide();       
+	}
+// ]]></script>
+  </body>
+
+</html>

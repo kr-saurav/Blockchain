@@ -1,0 +1,35 @@
+{% extends 'header.html'%}
+{% block title %}Transactions{%endblock%}
+
+{%block content%}
+<div class="container">
+<h1>Transactions in block {{index+1}}</h1>
+{% for i in range(0, transactions|length)%}
+<div class="jumbotron">
+<table id="customers" class="table table-bordered table-sm table-secondary">
+  <tr>
+    <th>S.No.</th>
+    <td>{{i+1}}</td>
+  </tr>
+  <tr>
+    <th>Sender's address</th>
+    <td>{{transactions[i].sender.export_key(format='PEM', compress='False')[26:-24]}}</td>
+  </tr>
+  <tr>
+    <th>Reciepient's address</th>
+    <td>{{transactions[i].reciepient.export_key(format='PEM', compress='False')[26:-24]}}</td>
+ </tr>
+ <tr>
+  <th>Amount</th>
+  <td>{{transactions[i].value}}</td>
+ </tr>
+ <tr>
+   <th>Transaction Id</th>
+   <td>{{transactions[i].transactionId}}</td>
+ </tr>
+</table>
+</div>
+{% endfor %}
+
+</div>
+{%endblock%}

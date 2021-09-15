@@ -1,0 +1,19 @@
+{% extends 'header.html'%}
+{% block title %}String{%endblock%}
+
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+    <h3>Connected to {{length}} peers :: </h3>
+    <table>
+        {%for i,v in Peers%}
+        <tr>
+            <th> Peer {{ i+1 }} </th>
+            <td> - </td>
+            <td> {{ v }} </td>
+        </tr>
+        {%endfor%}
+    </table>
+</div>
+
+{%endblock%}

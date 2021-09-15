@@ -1,0 +1,123 @@
+{% extends 'header.html'%}
+{% block title %}String{%endblock%}
+{% block content %}
+<!--- Image Slider -->
+<div id="slides" class="carousel slide" data-ride="carousel">
+   <ul class = "carousel-indicators">
+   	   <li data-targets="#sldes" data-slide-to="0" class="active"></li>
+   	</ul>
+   	<div class="carousel-inner">
+   		<div class = "carousel-item active">
+   			<img src="{{url_for('static', filename='images/bitcoin-slide.jpg')}}" style="width:100%; height:50%;">
+   			<div class="carousel-caption landing-button">
+   				<a href="/blockchain"><button type="button" class="btn btn-outline-light btn-lg">Blockchain</button></a>
+            </div>
+   		</div>
+   	</div>
+</div>
+
+<style>
+.carousel {
+  height: 860px !important;
+}
+.carousel-inner{
+  height: 860px !important;
+}
+.carousel-item.active {
+  max-height: 860px !important;
+}
+
+</style>
+<!--- Jumbotron -->
+
+
+<!--- Welcome Section -->
+<div class="container-fluid padding pt-40 pb-40">
+	<div class="row welcome text-center">
+		<div class="col-12">
+			<h1 class="display-2"> Built with ease.</h1>
+		</div>
+		<hr>
+		<div class="col-12">
+			<p class="lead">Welcome to our digital currency website.This currency is implemented using blockchain concept.</p>
+		</div>
+	</div>
+</div>
+
+<!--- Three Column Section -->
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class = "col-xs-12 col-sm-6 col-md-4">
+			<h3>Peer to Peer</h3>
+			<p>No third party involved, uses peer-to-peer network.</p>
+		</div>
+		<div class = "col-xs-12 col-sm-6 col-md-4">
+			<h3>Secure</h3>
+			<p>It is nearly impossible to corrupt the transactions data stored in blockchain.</p>
+		</div>
+		<div class = "col-sm-12 col-md-4">
+			<h3>Consensus</h3>
+			<p>Majority decides right and wrong.</p>
+		</div>
+	</div>
+<hr class="my-4">
+</div>
+<!--
+
+<div class="container-fluid padding">
+	<div class="row text-center padding" >
+		<div class="col-12">
+			<h2>Connect</h2>
+		</div>
+		<div class="col-12 social padding">
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-google-plus-g"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-youtube"></i></a>
+		</div>
+	</div>
+</div>-->
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+		<div class="row text-center">
+			<div class="col-md-4">
+                <hr class="light">
+                <p>Contact-</p>
+                <p>7771948483</p>
+                <p>malviya18@iitg.ac.in</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Our hours</h5>
+                <hr class="light">
+                <p>Monday: 9am - 5pm</p>
+                <p>Saturday: 10am - 4pm</p>
+                <p>Sunday: closed</p>
+            </div>
+             <div class="col-md-4">
+                <hr class="light">
+                <h5>Our Headquater</h5>
+                <hr class="light">
+                <p>IIT Guwahati</p>
+            </div>
+            <div class="col-12">
+            	<hr class="light-100">
+            	<h5>&copy; String.com</h5>
+            </div>	
+        </div>
+    </div>
+</footer>
+{%endblock%}
+
+
+<!-- View in Browser: Drew's #1 Trending YouTube Tutorial -->
+<!--<div class="youtube-tutorial">
+	<a href="http://w3n.link/bundle-bonus-playlist" target="_blank" style="cursor: pointer!important;">
+    <img src="https://w3newbie.com/wp-content/uploads/12-site-bundle-banner.png" style="max-width: 100%; position: absolute; bottom: 0;">
+  </a>
+</div>-->
+<!-- End View in Browser: Drew's #1 Trending YouTube Tutorial -->
+
+

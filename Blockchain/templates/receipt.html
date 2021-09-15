@@ -1,0 +1,24 @@
+{% extends 'header.html'%}
+{% block title %}Receipt{%endblock%}
+
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+    <table class="table">
+        {% if success==True:%}
+            <h1 style="color: green;">Transaction successful!</h1>
+            {%for key, value in result.items()%}
+            <tr>
+                <th> {{ key }} </th>
+                <td> {{ value }} </td>
+            </tr>
+            {%endfor%}
+        {% endif %}
+        {% if success==False%}
+            <h1 style="color: rgb(236, 20, 20);">Transaction failed!....try again</h1>
+        {% endif %}
+    </table>
+    <a href="/wallet"><button type="submit" class="btn btn-primary">Go back</button></a>
+</div>
+
+{%endblock%}
